@@ -12,7 +12,7 @@ ENV LANG en_US.UTF-8
 
 RUN apt-get update || : && apt-get install python3 python3-pip -y && rm -rf /var/lib/apt/lists/*
 
-COPY ./notion2anki/src/genanki/requirements.txt /tmp/requirements.txt 
+COPY ./notion2anki/server/genanki/requirements.txt /tmp/requirements.txt 
 RUN pip3 install -r /tmp/requirements.txt
 RUN pip3 install pyinstaller
 
