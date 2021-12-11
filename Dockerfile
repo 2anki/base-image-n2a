@@ -1,4 +1,4 @@
-FROM node:14-slim
+FROM node:16.13-slim
 
 LABEL maintainer Alexander Alemayhu
 
