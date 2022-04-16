@@ -8,5 +8,6 @@ docker_run: docker
 	docker run -t -i ${project} /bin/bash
 docker_push:
 	docker push ${project}
+.PHONY: notion2anki
 notion2anki:
 	git submodule foreach git pull origin main
