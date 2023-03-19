@@ -1,3 +1,3 @@
-# Docker Base Image for Notion2Anki
+# Docker Base Image for 2anki.net
 
-Base image for notion2anki server.
+Whenever the dependencies of [create_deck](https://github.com/2anki/create_deck) change, this image has to be rebuilt.
