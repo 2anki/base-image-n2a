@@ -1,4 +1,4 @@
-FROM node:18.16.1-slim
+FROM node:bookworm
 
 LABEL maintainer Alexander Alemayhu
 
@@ -10,11 +10,8 @@ RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
 
 ENV LANG en_US.UTF-8
 
-
-RUN apt-get update || : && apt-get install python3 python3-pip -y && rm -rf /var/lib/apt/lists/*
-
 COPY ./requirements.txt /tmp/requirements.txt 
-RUN pip3 install -r /tmp/requirements.txt
+RUN pip3 install --break-system-packages -r /tmp/requirements.txt
 
 RUN apt-get autoremove -y
 RUN rm -rf /var/lib/apt/lists/*
